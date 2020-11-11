@@ -1,4 +1,8 @@
-const num1 = prompt('Digite um numero');
-const num2 = prompt('Digite um numero');
+let num1 = prompt('Digite um numero');
+let num2 = prompt('Digite um numero');
 
-alert('os numeros digitados são '+ num1 + ' e '+ num2)
+num1 = Number(num1)
+num2 = Number(num2)
+
+const resultado = num1 + num2
+alert(`o resultado foi ${resultado}`)

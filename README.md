@@ -1,4 +1,4 @@
-## JavaScript e TypeScript
+### JavaScript e TypeScript
 
 Listagem do conteúdo principal
 

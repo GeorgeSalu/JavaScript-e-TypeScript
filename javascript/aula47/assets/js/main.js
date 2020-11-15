@@ -6,7 +6,7 @@ function criarHoraDosSegundos(segundos) {
 	});
 }
 
-const relogico = document.querySelector('.relogio');
+const relogio = document.querySelector('.relogio');
 const iniciar = document.querySelector('.iniciar');
 const pausar = document.querySelector('.pausar');
 const zerar = document.querySelector('.zerar');
@@ -16,7 +16,7 @@ let timer;
 function iniciaRelogio() {
 	timer = setInterval(function() {
 		segundos++;
-		relogico.innerHTML = criarHoraDosSegundos(segundos);
+		relogio.innerHTML = criarHoraDosSegundos(segundos);
 	}, 1000);
 }
 
@@ -31,6 +31,6 @@ pausar.addEventListener('click', function(event) {
 
 zerar.addEventListener('click', function(event) {
 	clearInterval(timer);
-	relogico.innerHTML = '00:00:00'
+	relogio.innerHTML = '00:00:00'
 	segundos = 0;
 })

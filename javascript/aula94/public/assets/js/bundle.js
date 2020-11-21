@@ -90,10 +90,40 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-console.log('ola js');
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modulo1__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modulo1 */ "./src/modulo1.js");
+
+console.log(_modulo1__WEBPACK_IMPORTED_MODULE_0__["nome"]);
+console.log(Object(_modulo1__WEBPACK_IMPORTED_MODULE_0__["soma"])(5, 5));
+
+/***/ }),
+
+/***/ "./src/modulo1.js":
+/*!************************!*\
+  !*** ./src/modulo1.js ***!
+  \************************/
+/*! exports provided: nome, sobrenome, idade, soma */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nome", function() { return nome; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sobrenome", function() { return sobrenome; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "idade", function() { return idade; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "soma", function() { return soma; });
+var nome = 'luiz';
+var sobrenome = 'miranda';
+var idade = 30;
+
+function soma(x, y) {
+  return x + y;
+}
+
+
 
 /***/ })
 

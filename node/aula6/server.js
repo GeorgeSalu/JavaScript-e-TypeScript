@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 
-
 //         Criar   ler   atualizar apagar
 // CRUD -> CREATE, READ, UPDATE,   DELETE
 //         POST    GET   PUT       DELETE
@@ -12,10 +11,10 @@ const app = express();
 
 app.get('/', (req, res) => {
   res.send(`
-  <form action="/" method="POST">
-  Nome: <input type="text" name="nome">
-  <button>Enviar</button>
-  </form>
+		<form action="/" method="POST">
+		Nome: <input type="text" name="nome">
+		<button>Enviar</button>
+		</form>
   `);
 });
 

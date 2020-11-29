@@ -8,7 +8,7 @@ class UserController {
 			res.json(novoUser);
 		} catch (e) {
 			res.status(400).json({
-				errors: e.errors.map((err) => err.message)
+				errors: e.errors.map(err => err.message)
 			})
 		}
 	}

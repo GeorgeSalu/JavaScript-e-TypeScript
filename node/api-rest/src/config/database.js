@@ -3,12 +3,12 @@ require('dotenv').config();
 module.exports = {
 
 	/**
+	 *  exemplo arquivo .env
 	 *  DATABASE=escola
 			DATABASE_HOST='127.0.0.1'
       DATABASE_PORT=3306
       DATABASE_USERNAME='root'
       DATABASE_PASSWORD='SENHA_FORTE'
-
 	 */
 
 	/* MariaDB */

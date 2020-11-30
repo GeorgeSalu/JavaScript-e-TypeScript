@@ -41,7 +41,7 @@ class UserController {
 
 			if(!user) {
 				return res.status(400).json({
-					errors: ['usuario não existes']
+					errors: ['usuario não existe']
 				})
 			}
 

@@ -16,8 +16,10 @@ class UserController {
 		try {
 			const users = await User.findAll();
 			return res.json(users);
-		} catch (error) {
-			return res.json(null);
+		} catch (e) {
+			return res.status(400).json({
+				errors: e.errors.map(err => err.message)
+			})
 		}
 	}
 
@@ -25,8 +27,10 @@ class UserController {
 		try {
 			const user = await User.findByPk(req.params.id);
 			return res.json(user);
-		} catch (error) {
-			return res.json(null);
+		} catch (e) {
+			return res.status(400).json({
+				errors: e.errors.map(err => err.message)
+			})
 		}
 	}
 

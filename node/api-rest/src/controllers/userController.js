@@ -47,7 +47,7 @@ class UserController {
 
 			const novosDados = await	user.update(req.body);
 			return res.json(novosDados);
-		} catch (error) {
+		} catch (e) {
 			return res.status(400).json({
 				errors: e.errors.map(err => err.message)
 			})
@@ -71,7 +71,7 @@ class UserController {
 
 			await	user.destroy();
 			return res.json(null);
-		} catch (error) {
+		} catch (e) {
 			return res.status(400).json({
 				errors: e.errors.map(err => err.message)
 			})

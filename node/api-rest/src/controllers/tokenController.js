@@ -1,4 +1,3 @@
-import Aluno from '../models/Aluno';
 import User from '../models/User';
 
 class TokenController {

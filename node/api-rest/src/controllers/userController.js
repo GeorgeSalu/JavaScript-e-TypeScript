@@ -5,7 +5,6 @@ class UserController {
 	async	store(req, res) {
 		try {
 			const novoUser = await User.create(req.body)
-
 			const {id, nome, email} = novoUser;
 			return res.json({id, nome, email});
 		} catch (e) {
@@ -41,7 +40,6 @@ class UserController {
 
 	async update(req, res) {
 		try {
-
 			const user = await User.findByPk(req.userId);
 
 			if(!user) {
@@ -62,7 +60,6 @@ class UserController {
 
 	async delete(req, res) {
 		try {
-
 			const user = await User.findByPk(req.userId);
 
 			if(!user) {

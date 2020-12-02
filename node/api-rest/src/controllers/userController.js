@@ -27,7 +27,9 @@ class UserController {
 	async show(req, res) {
 		try {
 			const user = await User.findByPk(req.params.id);
-			return res.json(user);
+
+			const { id, nome, email } = user;
+			return res.json({ id, nome, email });
 		} catch (e) {
 			return res.status(400).json({
 				errors: e.errors.map(err => err.message)
@@ -37,12 +39,8 @@ class UserController {
 
 	async update(req, res) {
 		try {
-			if(!req.params.id) {
-				return res.status(400).json({
-					errors: ['ID não enviado']
-				})
-			}
-			const user = await User.findByPk(req.params.id);
+
+			const user = await User.findByPk(req.user.id);
 
 			if(!user) {
 				return res.status(400).json({

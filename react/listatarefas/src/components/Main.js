@@ -15,7 +15,7 @@ export default class Main extends Component {
     let {novaTarefa} = this.state;
     novaTarefa = novaTarefa.trim();
 
-    if(tarefas.indexOf(novaTarefa) != -1) return;
+    if(tarefas.indexOf(novaTarefa) !== -1) return;
     
     const novasTarefas = [...tarefas];
     this.setState({
@@ -26,6 +26,20 @@ export default class Main extends Component {
   handleChange = (e) => {
     this.setState({
       novaTarefa: e.target.value
+    })
+  }
+
+  handleEdit = (e, index) => {
+
+  }
+
+  handleDelete = (e, index) => {
+    const {tarefas} = this.state;
+    const novasTarefas = [...tarefas];
+    novasTarefas.splice(index, 1);
+
+    this.setState({
+      tarefas: [...novasTarefas]
     })
   }
 
@@ -46,11 +60,16 @@ export default class Main extends Component {
         </form>
 
         <ul className="tarefas">
-          {tarefas.map(tarefa => (
+          {tarefas.map((tarefa, index) => (
             <li key={tarefa}>{tarefa}
               <span>
-                <FaEdit className="edit" />
-                <FaWindowClose className="delete"/>
+                <FaEdit 
+                  className="edit"
+                  onClick={(e) => this.handleEdit(e, index)} />
+                <FaWindowClose 
+                  className="delete" 
+                  onClick={(e) => this.handleDelete(e, index)} 
+                />
               </span>
             </li>
           ))}

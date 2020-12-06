@@ -1,17 +1,13 @@
 import React, {Component} from 'react'
+import './Main.css'
 
 export default class Main extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      novaTarefa: '',
-    };
+  state = {
+    novaTarefa: '',
+  };
 
-    this.inputMudou = this.inputMudou.bind(this)
-  }
-
-  inputMudou(e) {
+  handleChange = (e) => {
     this.setState({
       novaTarefa: e.target.value
     })
@@ -22,9 +18,9 @@ export default class Main extends Component {
     return (
       <div className="main">
         <h1>Lista de tarefas</h1>
-        {novaTarefa}
+        
         <form action="#">
-          <input type="text" onChange={this.inputMudou} />
+          <input type="text" onChange={this.handleChange} />
           <button type="submit">Enviar</button>
         </form>
       </div>

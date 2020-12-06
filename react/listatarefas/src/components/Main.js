@@ -1,11 +1,16 @@
 import React, {Component} from 'react'
-import {FaPlus} from 'react-icons/fa'
+import {FaPlus, FaEdit, FaWindowClose} from 'react-icons/fa'
 import './Main.css'
 
 export default class Main extends Component {
 
   state = {
     novaTarefa: '',
+    tarefas: [
+      'fazer cafe',
+      'beber agua',
+      'estudar'
+    ]
   };
 
   handleChange = (e) => {
@@ -15,7 +20,7 @@ export default class Main extends Component {
   }
 
   render() {
-    const {novaTarefa} = this.state
+    const {novaTarefa, tarefas} = this.state
     return (
       <div className="main">
         <h1>Lista de tarefas</h1>
@@ -29,6 +34,17 @@ export default class Main extends Component {
             <FaPlus />
           </button>
         </form>
+
+        <ul className="tarefas">
+          {tarefas.map(tarefa => (
+            <li key={tarefa}>{tarefa}
+              <div>
+                <FaEdit />
+                <FaWindowClose />
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     )
   }

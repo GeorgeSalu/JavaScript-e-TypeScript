@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {FaPlus, FaEdit, FaWindowClose} from 'react-icons/fa'
+import {FaEdit, FaWindowClose} from 'react-icons/fa'
 import Form from './Form';
 import './Main.css'
 

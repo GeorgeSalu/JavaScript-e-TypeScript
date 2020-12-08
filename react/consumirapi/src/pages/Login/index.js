@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import { isEmail } from 'validator';
-import { get } from 'lodash';
 import { Form } from './styled';
 import { Container } from '../../styles/GlobalStyles';
 

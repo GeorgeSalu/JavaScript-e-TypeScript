@@ -29,7 +29,6 @@ export default function Login(props) {
     }
 
     if (formErrors) return;
-
     dispatch(actions.loginRequest({ email, password, prevPath }));
   };
 
@@ -48,7 +47,7 @@ export default function Login(props) {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="seu email"
+          placeholder="sua senha"
         />
 
         <button type="submit">Acessar</button>

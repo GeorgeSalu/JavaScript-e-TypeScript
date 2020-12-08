@@ -5,6 +5,7 @@ import { get } from 'lodash';
 import { Container } from '../../styles/GlobalStyles';
 import { Form } from './styled';
 import axios from '../../services/axios';
+import history from '../../services/history';
 
 export default function Register() {
   const [nome, setNome] = useState('');
@@ -31,14 +32,15 @@ export default function Register() {
     if (formErrors) return;
 
     try {
-      const response = axios.post('/users/', {
+      await axios.post('/users/', {
         nome,
         password,
         email,
       });
-    } catch (e) {
-      const status = get(e, 'response.status', 0);
-      const errors = get(e, 'response.data.errors', []);
+      toast.success('voce fez seu cadastro');
+      history.push('/login');
+    } catch (err) {
+      const errors = get(err, 'response.data.errors', []);
 
       errors.map((error) => toast.error(error));
     }

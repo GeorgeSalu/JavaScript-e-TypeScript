@@ -10,3 +10,4 @@ const verifyUser: VerifyUserFn = (user, sentValue) => {
 const bdUser = { username: 'joao', password: '123456' };
 const sentUser = { username: 'joao', password: '123456', permissions: '' };
 const loggedIn = verifyUser(bdUser, sentUser);
+console.log(loggedIn);

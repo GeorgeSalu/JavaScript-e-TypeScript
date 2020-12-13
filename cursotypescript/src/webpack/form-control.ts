@@ -32,8 +32,8 @@ function checkEqualPasswords(
   password2: HTMLInputElement,
 ) {
   if (password.value !== password2.value) {
-    showErrorMessage(password, 'Senhas não batem');
-    showErrorMessage(password2, 'Senhas não batem');
+    showErrorMessage(password, 'As senhas devem ser iguais');
+    showErrorMessage(password2, 'As senhas devem ser iguais');
   }
 }
 

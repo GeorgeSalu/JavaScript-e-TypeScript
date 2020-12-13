@@ -14,7 +14,7 @@ form.addEventListener('submit', function (event: Event) {
   checkForEmptyFields(username, email, password, password2);
   checkEmail(email);
   checkEqualPasswords(password, password2);
-  if (shouldSendForm(this)) console.log('FORMULÁRIO ENVIADO');
+  if (shouldSendForm(this)) console.log('formulario enviado');
 });
 
 function checkForEmptyFields(...inputs: HTMLInputElement[]): void {

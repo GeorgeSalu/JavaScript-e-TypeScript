@@ -23,7 +23,9 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "@types/validator": "^13.1.1",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
-    "@typescript-eslint/parser": "^3.3.0"
+    "@typescript-eslint/parser": "^3.3.0",
+    "validator": "^13.1.1"
   }
 }

@@ -1,1 +1,1 @@
-console.log('ola mundots');
+import './form-control';

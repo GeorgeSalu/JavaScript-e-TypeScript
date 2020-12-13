@@ -86,6 +86,20 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/webpack/form-control.ts":
+/*!*************************************!*\
+  !*** ./src/webpack/form-control.ts ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+console.log('mod');
+
+
+/***/ }),
+
 /***/ "./src/webpack/index.ts":
 /*!******************************!*\
   !*** ./src/webpack/index.ts ***!
@@ -95,7 +109,8 @@
 
 "use strict";
 
-console.log('ola mundots');
+Object.defineProperty(exports, "__esModule", { value: true });
+__webpack_require__(/*! ./form-control */ "./src/webpack/form-control.ts");
 
 
 /***/ })

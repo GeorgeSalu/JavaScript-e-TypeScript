@@ -3,18 +3,22 @@ export class Pessoa {
     private nome: string,
     private sobrenome: string,
     private idade: number,
-    private cpf: string,
-  ) {}
-
-  getNome(): string {
-    return this.nome;
+    private _cpf: string,
+  ) {
+    this.cpf = _cpf;
   }
 
-  getCpf(): string {
-    return this.cpf;
+  set cpf(cpf: string) {
+    console.log('SETTER CHAMADO');
+    this._cpf = cpf;
+  }
+
+  get cpf(): string {
+    console.log('GETTER CHAMADO');
+    return this._cpf.replace(/\D/g, '');
   }
 }
 
-const pessoa = new Pessoa('luiz', 'miranda', 30, '000.000.000-00');
-console.log(pessoa.getNome());
-console.log(pessoa.getCpf());
+const pessoa = new Pessoa('Luiz', 'Miranda', 30, '123.456.798-00');
+pessoa.cpf = '123.456.798-99';
+console.log(pessoa.cpf);

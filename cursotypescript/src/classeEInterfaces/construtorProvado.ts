@@ -12,7 +12,11 @@ export class Database {
   }
 
   static getDatabase(host: string, user: string, password: string): Database {
-    if (Database.database) return Database.database;
+    if (Database.database) {
+      console.log('retornando instancia ja criada');
+      return Database.database;
+    }
+    console.log('criando nova instancia');
     Database.database = new Database(host, user, password);
     return Database.database;
   }

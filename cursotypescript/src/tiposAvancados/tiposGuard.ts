@@ -28,3 +28,4 @@ export function mostraNome(obj: PessoaOuAnimal): void {
 }
 
 mostraNome(new Aluno('João'));
+mostraNome({ tipo: 'animal', cor: 'rosa' });

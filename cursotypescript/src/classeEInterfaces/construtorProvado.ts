@@ -1,3 +1,4 @@
+// Singleton - Gof | Factory Method - Gof
 export class Database {
   private static database: Database;
 

@@ -15,3 +15,6 @@ const pessoa2: Pessoa = {
   enderecos: ['Av. Brasil'],
   idade: 30,
 };
+
+pessoa2.idade = 31;
+console.log(pessoa2);

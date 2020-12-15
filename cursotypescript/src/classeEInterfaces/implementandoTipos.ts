@@ -17,3 +17,6 @@ export class Pessoa implements TipoNome, TipoSobrenome, TipoNomeCompleto {
     return this.nome + ' ' + this.sobrenome;
   }
 }
+
+const pessoa = new Pessoa('Luiz', 'Miranda');
+console.log(pessoa.nomeCompleto());

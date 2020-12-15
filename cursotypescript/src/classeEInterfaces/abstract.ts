@@ -41,4 +41,8 @@ const guerreira = new Guerreira('Guereira', 100, 1000);
 const monstro = new Monstro('Monstro', 87, 1000);
 
 guerreira.atacar(monstro);
+guerreira.atacar(monstro);
+guerreira.atacar(monstro);
+monstro.atacar(guerreira);
+monstro.atacar(guerreira);
 monstro.atacar(guerreira);

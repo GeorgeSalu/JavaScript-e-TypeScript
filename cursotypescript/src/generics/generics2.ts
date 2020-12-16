@@ -6,7 +6,7 @@ async function promiseAsync() {
 }
 
 function minhaPromise(): Promise<number> {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(1);
     }, 1000);

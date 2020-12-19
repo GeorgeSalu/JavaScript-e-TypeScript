@@ -14,6 +14,7 @@ namespace MeuNamespace {
   }
 }
 
+const constDoNamespace = 'valor da const do namespace';
 const pessoaDoNamespace = new MeuNamespace.PessoaDoNamespace('luiz');
 console.log(pessoaDoNamespace);
 console.log(MeuNamespace.nomeDoNamespace);

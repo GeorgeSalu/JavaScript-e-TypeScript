@@ -1,9 +1,8 @@
-type CartItem = { name: string; price: number };
-type OrderStatus = 'open' | 'closed';
+import { CartItem } from './interfaces/cart-item';
+import { OrderStatus } from './interfaces/order-status';
 
 export class ShoppingCart {
   private readonly _items: CartItem[] = [];
-  private _orderStatus: OrderStatus = 'open';
 
   addItem(item: CartItem): void {
     this._items.push(item);
@@ -17,37 +16,14 @@ export class ShoppingCart {
     return this._items;
   }
 
-  get orderStatus(): OrderStatus {
-    return this._orderStatus;
-  }
-
   total(): number {
     return +this._items
       .reduce((total, next) => total + next.price, 0)
       .toFixed(2);
   }
 
-  checkout(): void {
-    if (this.isEmpty()) {
-      console.log('seu carrinho esta vazio');
-    }
-
-    this._orderStatus = 'closed';
-    this.sendMessage(`seu pedido com total de ${this.total()} foi recebido`);
-    this.saveOrder();
-    this.clear();
-  }
-
   isEmpty(): boolean {
     return this._items.length === 0;
-  }
-
-  sendMessage(msg: string): void {
-    console.log('mensagem enviada', msg);
-  }
-
-  saveOrder(): void {
-    console.log('pedido salvo com sucesso');
   }
 
   clear(): void {
@@ -55,13 +31,3 @@ export class ShoppingCart {
     this._items.length = 0;
   }
 }
-
-const shoppingCart = new ShoppingCart();
-shoppingCart.addItem({ name: 'camisete', price: 49.9 });
-shoppingCart.addItem({ name: 'caderno', price: 9.9 });
-shoppingCart.addItem({ name: 'lapis', price: 1.9 });
-
-console.log(shoppingCart.items);
-console.log(shoppingCart.total());
-shoppingCart.checkout();
-console.log(shoppingCart.orderStatus);

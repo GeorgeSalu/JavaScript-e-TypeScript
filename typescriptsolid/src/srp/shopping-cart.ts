@@ -2,6 +2,7 @@ type CartItem = { name: string; price: number };
 
 export class ShoppingCart {
   private readonly _items: CartItem[] = [];
+  private orderStatus: 'open' | 'close' = 'open';
 
   addItem(item: CartItem): void {
     this._items.push(item);
@@ -14,6 +15,40 @@ export class ShoppingCart {
   get items(): Readonly<CartItem[]> {
     return this._items;
   }
+
+  total(): number {
+    return +this._items
+      .reduce((total, next) => total + next.price, 0)
+      .toFixed(2);
+  }
+
+  checkout(): void {
+    if (this.isEmpty()) {
+      console.log('seu carrinho esta vazio');
+    }
+
+    this.orderStatus = 'close';
+    this.sendMessage('seu pedido foi recebido');
+    this.saveOrder();
+    this.clear();
+  }
+
+  isEmpty(): boolean {
+    return this._items.length === 0;
+  }
+
+  sendMessage(msg: string): void {
+    console.log('mensagem enviada', msg);
+  }
+
+  saveOrder(): void {
+    console.log('pedido salvo com sucesso');
+  }
+
+  clear(): void {
+    console.log('carrinho de compras limpo');
+    this._items.length = 0;
+  }
 }
 
 const shoppingCart = new ShoppingCart();
@@ -22,3 +57,5 @@ shoppingCart.addItem({ name: 'caderno', price: 9.9 });
 shoppingCart.addItem({ name: 'lapis', price: 1.9 });
 
 console.log(shoppingCart.items);
+console.log(shoppingCart.total());
+shoppingCart.checkout();

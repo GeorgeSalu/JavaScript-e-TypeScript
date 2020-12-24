@@ -1,8 +1,9 @@
 type CartItem = { name: string; price: number };
+type OrderStatus = 'open' | 'closed';
 
 export class ShoppingCart {
   private readonly _items: CartItem[] = [];
-  private orderStatus: 'open' | 'close' = 'open';
+  private _orderStatus: OrderStatus = 'open';
 
   addItem(item: CartItem): void {
     this._items.push(item);
@@ -16,6 +17,10 @@ export class ShoppingCart {
     return this._items;
   }
 
+  get orderStatus(): OrderStatus {
+    return this._orderStatus;
+  }
+
   total(): number {
     return +this._items
       .reduce((total, next) => total + next.price, 0)
@@ -27,8 +32,8 @@ export class ShoppingCart {
       console.log('seu carrinho esta vazio');
     }
 
-    this.orderStatus = 'close';
-    this.sendMessage('seu pedido foi recebido');
+    this._orderStatus = 'closed';
+    this.sendMessage(`seu pedido com total de ${this.total()} foi recebido`);
     this.saveOrder();
     this.clear();
   }
@@ -59,3 +64,4 @@ shoppingCart.addItem({ name: 'lapis', price: 1.9 });
 console.log(shoppingCart.items);
 console.log(shoppingCart.total());
 shoppingCart.checkout();
+console.log(shoppingCart.orderStatus);

@@ -14,6 +14,6 @@ shoppingCart.addItem(new Product('lapis', 1.59));
 
 console.log(shoppingCart.items);
 console.log(shoppingCart.total());
-console.log(shoppingCart.totalWithDicount());
+console.log(shoppingCart.totalWithDiscount());
 order.checkout();
 console.log(order.orderStatus);

@@ -21,7 +21,7 @@ export class ShoppingCart {
       .toFixed(2);
   }
 
-  totalWithDicount(): number {
+  totalWithDiscount(): number {
     return this.total() - this.total() * 0.1;
   }
 

@@ -1,5 +1,4 @@
 import { CartItem } from './interfaces/cart-item';
-import { OrderStatus } from './interfaces/order-status';
 
 export class ShoppingCart {
   private readonly _items: CartItem[] = [];

@@ -9,7 +9,7 @@ export class FiftyPercentDiscount extends Discount {
   }
 }
 
-export class TemPercentDiscount extends Discount {
+export class TenPercentDiscount extends Discount {
   private readonly discount = 0.1;
   calculate(price: number): number {
     return price - price * this.discount;

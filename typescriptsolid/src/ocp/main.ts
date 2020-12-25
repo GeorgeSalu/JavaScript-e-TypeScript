@@ -1,3 +1,8 @@
+/**
+ * open/closed principle
+ * entidades devem estar abertas para extensão, mas fechadas para modificação.
+ */
+
 import { Messaging } from './service/messaging';
 import { Order } from './entities/order';
 import { Persistence } from './service/persistence';

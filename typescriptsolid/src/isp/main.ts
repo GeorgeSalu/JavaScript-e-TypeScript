@@ -1,5 +1,5 @@
 /**
- * principio da segregação de interface
+ * Interface segregation principle (principio da segregação de interfaces)
  * os clientes não devem ser forcados a depender de types, interfaces ou membros
  * abstratos que não utilizam
  */

@@ -1,7 +1,6 @@
 import { ShoppingCartProtocol } from './interfaces/shopping-cart-protocol';
 import { Messaging } from '../service/messaging';
 import { OrderStatus } from './interfaces/order-status';
-import { ShoppingCart } from './shopping-cart';
 import { Persistence } from '../service/persistence';
 import { CustomerOrder } from './interfaces/customer-protocol';
 

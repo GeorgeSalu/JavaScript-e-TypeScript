@@ -1,6 +1,7 @@
 /**
  * principio da segregação de interface
- * os clientes não devem ser forcados a depender de interfaces que não utilizam
+ * os clientes não devem ser forcados a depender de types, interfaces ou membros
+ * abstratos que não utilizam
  */
 import { FiftyPercentDiscount } from './classes/discount';
 import { Messaging } from './service/messaging';

@@ -21,7 +21,15 @@ export function PomodoroTimer(props: Props): JSX.Element {
     <div className="pomodoro">
       <h2>you are: working</h2>
       <Timer mainTime={mainTime} />
-      <Button text="teste" onClick={() => console.log(1)}></Button>
+      <div className="controls">
+        <Button text="teste" onClick={() => console.log(1)}></Button>
+        <Button text="teste" onClick={() => console.log(1)}></Button>
+        <Button text="teste" onClick={() => console.log(1)}></Button>
+      </div>
+
+      <div className="details">
+        <p>ssss</p>
+      </div>
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import './App.css';
 import { PomodoroTimer } from './components/pomodoro-timer';
 
 function App(): JSX.Element {

@@ -1,6 +1,6 @@
 import './App.css';
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="App">
       <h1>Ola mundo</h1>

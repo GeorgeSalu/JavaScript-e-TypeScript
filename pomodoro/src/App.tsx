@@ -5,7 +5,7 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <h1>Ola mundo</h1>
-      <PomodoroTimer defaultPomodoroTime={150} />
+      <PomodoroTimer defaultPomodoroTime={3600} />
     </div>
   );
 }

@@ -2,11 +2,11 @@ import React from 'react';
 import { useInterval } from '../hooks/use-interval';
 
 interface Props {
-  defaultPromodoroTime: number;
+  defaultPomodoroTime: number;
 }
 
 export function PomodoroTimer(props: Props): JSX.Element {
-  const [mainTime, setMainTime] = React.useState(props.defaultPromodoroTime);
+  const [mainTime, setMainTime] = React.useState(props.defaultPomodoroTime);
 
   useInterval(() => {
     setMainTime(mainTime - 1);

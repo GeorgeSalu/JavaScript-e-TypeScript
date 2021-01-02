@@ -23,7 +23,7 @@ export class ProductComposite extends ProductComponent {
   add(...products: ProductComponent[]): void {
     products.forEach((product) => this.children.push(product));
   }
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
   remove(product: ProductComponent): void {
     const productIndex = this.children.indexOf(product);
     if (productIndex !== -1) this.children.splice(productIndex, 1);
@@ -37,7 +37,7 @@ export class ProductComposite extends ProductComponent {
 // client
 const camisa = new ProductLeaf('camisa', 40);
 const bicicleta = new ProductLeaf('bicicleta', 100);
-const camiseta = new ProductLeaf('camiseta', 40);
+const camiseta = new ProductLeaf('camiseta', 45);
 const productBox = new ProductComposite();
-productBox.add(camisa, bicicleta, camisa);
+productBox.add(camisa, bicicleta, camiseta);
 console.log(productBox.getPrice());
